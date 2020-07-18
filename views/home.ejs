@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%=p1%></p>
+
+<% for(var i=0; i<posts.length;i++){ %>
+<h2><%=posts[i].blogTitle%></h2>
+<p><%=(posts[i].blogBody).substr(0,100)+"...."%><a href="/posts/<%=posts[i].blogTitle%>">Read more</a></p>
+<%}%>
+<a class="btn btn-block btn-google" href="/auth/google" role="button">
+    <i class="fab fa-google"></i>
+    Sign In with Google
+  </a>
+
+
+<%- include("partials/footer")-%>

@@ -1,0 +1,236 @@
+/* refer this link for finding out how to make footer stick to bottom */
+
+
+html, body {
+
+  margin:0;
+  padding:0;
+  height:100%;
+
+  
+}
+
+body{
+  background-color: #f7f7f7;
+
+}
+
+
+#main {
+  height: 100vh;
+}
+
+
+
+.contain{
+  min-height:100%;
+  position:relative;
+}
+
+/* .header{
+
+
+} */
+
+.weat{
+
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 150px;
+
+}
+
+.homePosts{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.heading{
+  margin-bottom: 30px;
+}
+
+#body {
+  padding:10px;
+  padding-bottom:100px;   /* Height of the footer */
+}
+
+.navbar {
+
+   padding: 15px 25px 15px 25px;
+   border: 0;
+   border-radius: 0;
+   margin-bottom: 40px;
+   font-size: 12px;
+   letter-spacing: 5px;
+
+}
+.navbar-nav  li a:hover {
+   color: #1abc9c !important;
+   text-decoration: none;
+
+}
+
+
+.centerit{
+  text-align: center;
+  margin-top: 200px;
+}
+
+.nav-item{
+ padding-left: 15px;
+ padding-right: 15px;
+}
+
+
+.cc p{
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
+.cc h2{
+  font-family: 'Aladin', cursive;
+}
+
+.cc:hover {
+  transform: scale(1.1); 
+  transition: 0.7s;/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+.fa-trash{
+  position: relative;
+  top: 35px;
+  font-size: 25px;
+  color: red;
+}
+
+
+.delete{
+  cursor: pointer;
+}
+
+/* .foot{
+ position: fixed;
+
+
+left: 0;
+
+right: 0;
+
+bottom: 0;
+ margin-top: 50px;
+ width: 100%;
+ text-align: center;
+ height: 60px;
+ background-color: #888888;
+ color: #dae1e7;
+}
+*/
+.foot p{
+
+ padding-top: 20px;
+ font-size: 15px;
+ font-family: 'Comic Neue', cursive;
+ 
+}
+
+.foot{
+  position:absolute;
+left:0;
+bottom:0;
+right:0;
+  
+  width:100%;
+  height:60px;   /* Height of the footer */
+  background-color: #888888;
+  color: #dae1e7;
+  margin-top: 70px;
+  text-align: center;
+  
+}
+
+
+.f{
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  font-weight: 300;
+  background: #50a3a2;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  margin: 10% auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+
+input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+}
+
+button {
+  appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  width: 250px;
+  font-size: 18px;
+}
+
+
+.aboutH1{
+  color: blue;
+} */
