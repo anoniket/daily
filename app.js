@@ -15,12 +15,10 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 const cors = require("cors");
 
-//87683788767-nfp764066q9irmoel1adv6f5t4jo21sj.apps.googleusercontent.com  CLIENT ID
-//_7FjNQefIpzR0yduztXesuOu CLIENT SECRET
 
 
-// mongoose.connect("mongodb://localhost:27017/personalBlog",{useNewUrlParser:true,useUnifiedTopology: true});
-mongoose.connect("mongodb+srv://admin-aniket:Admin123@cluster0-z81iv.mongodb.net/personalBlog",{ useNewUrlParser: true,useUnifiedTopology: true , useFindAndModify: false });
+
+mongoose.connect(process.env.mongourl,{ useNewUrlParser: true,useUnifiedTopology: true , useFindAndModify: false });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -68,8 +66,8 @@ passport.deserializeUser(function(User, done) {
 
 
 passport.use(new GoogleStrategy({
-  clientID: process.env.clientID || "782132931351-lb3im7qg19k9fh7ml711meld1nugur5j.apps.googleusercontent.com",
-  clientSecret: process.env.clientSecret || "OmW66gFhp9Ujz6CUkFL16yW7",
+  clientID: process.env.clientID,
+  clientSecret: process.env.clientSecret,
   callbackURL: "/auth/google/compose"
 },
 function(accessToken, refreshToken, profile, cb) {
@@ -292,7 +290,7 @@ res.send(req.body.userName);
 })
 
 
-app.get("/posts/:xyz",function(req,res){
+app.get("/blog/:xyz",function(req,res){
   console.log(req.params.xyz);
 
 //suppose a user has searched gokUl, we will first convert this into Gokul then find in blog database
@@ -302,10 +300,14 @@ Blog.findOne({_id:req.params.xyz},function(err,foundBlog){
   if(!err){
     if(foundBlog){
       res.send(foundBlog);
+      
 
     }else{
+      res.send(err);
       console.log("not found");
     }
+  } else if(!foundBlog){
+    res.send("Nothing");
   }
 });
 
