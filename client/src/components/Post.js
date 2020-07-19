@@ -59,7 +59,7 @@ function Post(match){
 
         else{
             return <div className="container" id="body">
-            <h1>Hek</h1>
+            
             <h1>{post.postTitle}</h1>
             <p>{post.postBody}</p>
                 </div>
