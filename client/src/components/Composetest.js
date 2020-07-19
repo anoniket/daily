@@ -4,6 +4,7 @@ import Compose from "./Compose";
 import Loader from 'react-loader-spinner';
 import test from "./TestLogin";
 import TestLogin from "./TestLogin";
+import Welcome from "./Welcome";
 
 function Composetest(){
 
@@ -16,11 +17,12 @@ var test = TestLogin();
         }
 
         else if (test ==="No"){
-            return <div className="container centerit" id="body">
-            <h1>Sign in Needed</h1> 
-            <button type="button" class="btn btn-outline-danger btn-lg gbutton"><i class="fab fa-google" style={{marginRight:"10px"}}></i>Sign In</button>
-    <button type="button" class="btn btn-outline-danger btn-lg"><i class="fab fa-google" style={{marginRight:"10px"}}></i>Sign Up</button>
-        </div>
+    //         return <div className="container centerit" id="body">
+    //         <h1>Sign in Needed</h1> 
+    //         <button type="button" class="btn btn-outline-danger btn-lg gbutton"><i class="fab fa-google" style={{marginRight:"10px"}}></i>Sign In</button>
+    // <button type="button" class="btn btn-outline-danger btn-lg"><i class="fab fa-google" style={{marginRight:"10px"}}></i>Sign Up</button>
+    //     </div>
+    return <Welcome />
         }
         else{
             return <div

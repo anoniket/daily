@@ -27,7 +27,7 @@ function App(){
      <Route path="/about" component={About} />
      <Route path="/compose" component={Composetest} />
      <Route path="/contact" component={Contact} />
-     <Route path="/posts/:xyz" component={Post} />
+     <Route path="/post/:xyz" component={Post} />
      <Route path="/" exact component={Home} />
      <Route path="/weather" component={Weather} />
      <Route path="/profile" component={ProfileTest} />
