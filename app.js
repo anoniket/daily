@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const lod = require("lodash");
 const path = require("path");
 require("dotenv").config()
-// Load the core build.
+// Load the core build. 
 
 
 //oAuth
@@ -94,7 +94,8 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, "client/build")));
+
 
 
 
